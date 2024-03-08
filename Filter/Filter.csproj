@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		
+		<AssemblyName>Sidub.Platform.Filter</AssemblyName>
+		<RootNamespace>Sidub.Platform.Filter</RootNamespace>
+
+		<!-- Workaround: https://github.com/dotnet/sourcelink - Azure Repos not supporting symbol packages -->
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\icon.png" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\LICENSE.txt" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" Visible="False" />
+
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+	</ItemGroup>
+
+</Project>

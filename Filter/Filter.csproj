@@ -9,6 +9,10 @@
 		<AssemblyName>Sidub.Platform.Filter</AssemblyName>
 		<RootNamespace>Sidub.Platform.Filter</RootNamespace>
 
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
 		<!-- Workaround: https://github.com/dotnet/sourcelink - Azure Repos not supporting symbol packages -->
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 	</PropertyGroup>

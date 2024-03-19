@@ -1,4 +1,8 @@
-﻿using Sidub.Platform.Filter.Services;
+﻿#region Imports
+
+using Sidub.Platform.Filter.Services;
+
+#endregion
 
 namespace Sidub.Platform.Filter.Parsers.Gremlin
 {
@@ -6,7 +10,7 @@ namespace Sidub.Platform.Filter.Parsers.Gremlin
     /// <summary>
     /// Represents the configuration for the Gremlin filter parser.
     /// </summary>
-    public class GremlinFilterParserConfiguration : IFilterServiceConfiguration
+    public class GremlinFilterConfiguration : IFilterServiceConfiguration
     {
 
         #region Public properties
@@ -26,9 +30,9 @@ namespace Sidub.Platform.Filter.Parsers.Gremlin
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GremlinFilterParserConfiguration"/> class.
+        /// Initializes a new instance of the <see cref="GremlinFilterConfiguration"/> class.
         /// </summary>
-        public GremlinFilterParserConfiguration()
+        public GremlinFilterConfiguration()
         {
             FilterParsers = new List<IFilterParser>()
                 {

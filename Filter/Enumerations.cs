@@ -12,17 +12,17 @@
         /// <summary>
         /// OData filter parser.
         /// </summary>
-        OData,
+        OData = 1 << 1,
 
         /// <summary>
         /// Gremlin filter parser.
         /// </summary>
-        Gremlin,
+        Gremlin = 1 << 2,
 
         /// <summary>
         /// MySql filter parser.
         /// </summary>
-        MySql
+        MySql = 1 << 3
     }
 
     /// <summary>

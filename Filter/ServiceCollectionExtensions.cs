@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Sidub.Platform.Filter.Parsers.Gremlin;
 using Sidub.Platform.Filter.Parsers.MySql;
 using Sidub.Platform.Filter.Parsers.OData;
+using Sidub.Platform.Filter.Services;
 
 #endregion
 
@@ -24,17 +25,17 @@ namespace Sidub.Platform.Filter
         /// <param name="services">IServiceCollection extension.</param>
         /// <param name="parser">Filter parser configuration type.</param>
         /// <returns>IServiceCollection result.</returns>
-        public static IServiceCollection AddFilter(
+        public static IServiceCollection AddSidubFilter(
             this IServiceCollection services, FilterParserType? parser = null)
         {
             if (parser?.HasFlag(FilterParserType.OData) ?? false)
-                services.AddTransient<ODataFilterService>();
+                services.AddTransient<IFilterService<ODataFilterConfiguration>, ODataFilterService>();
 
             if (parser?.HasFlag(FilterParserType.Gremlin) ?? false)
-                services.AddTransient<GremlinFilterService>();
+                services.AddTransient<IFilterService<GremlinFilterConfiguration>, GremlinFilterService>();
 
             if (parser?.HasFlag(FilterParserType.MySql) ?? false)
-                services.AddTransient<MySqlFilterService>();
+                services.AddTransient<IFilterService<MySqlFilterConfiguration>, MySqlFilterService>();
 
             return services;
         }

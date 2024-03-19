@@ -7,7 +7,7 @@ using Sidub.Platform.Filter.Services;
 namespace Sidub.Platform.Filter.Parsers.MySql
 {
 
-    public class MySqlFilterService : FilterService<MySqlFilterParserConfiguration>
+    public class MySqlFilterService : FilterService<MySqlFilterConfiguration>
     {
 
         #region Constructors

@@ -7,7 +7,7 @@ using Sidub.Platform.Filter.Services;
 namespace Sidub.Platform.Filter.Parsers.OData
 {
 
-    public class ODataFilterService : FilterService<ODataFilterParserConfiguration>
+    public class ODataFilterService : FilterService<ODataFilterConfiguration>
     {
 
         #region Constructors

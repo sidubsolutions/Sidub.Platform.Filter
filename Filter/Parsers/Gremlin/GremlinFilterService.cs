@@ -7,7 +7,7 @@ using Sidub.Platform.Filter.Services;
 namespace Sidub.Platform.Filter.Parsers.Gremlin
 {
 
-    public class GremlinFilterService : FilterService<GremlinFilterParserConfiguration>
+    public class GremlinFilterService : FilterService<GremlinFilterConfiguration>
     {
 
         #region Constructors

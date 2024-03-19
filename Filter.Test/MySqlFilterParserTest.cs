@@ -17,16 +17,16 @@ namespace Sidub.Platform.Filter.Test
     public class MySqlFilterParserTest
     {
 
-        private readonly IFilterService<MySqlFilterParserConfiguration> _filterParserService;
+        private readonly IFilterService<MySqlFilterConfiguration> _filterParserService;
 
         public MySqlFilterParserTest()
         {
             // initialize dependency injection environment...
             var serviceProvider = new ServiceCollection()
-                .AddFilter(FilterParserType.MySql)
+                .AddSidubFilter(FilterParserType.MySql)
                 .BuildServiceProvider();
 
-            _filterParserService = serviceProvider.GetService<MySqlFilterService>() ?? throw new Exception("Filter parser service not initialized.");
+            _filterParserService = serviceProvider.GetService<IFilterService<MySqlFilterConfiguration>>() ?? throw new Exception("Filter parser service not initialized.");
         }
 
         [TestMethod]

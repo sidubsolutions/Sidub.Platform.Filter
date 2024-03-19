@@ -17,16 +17,16 @@ namespace Sidub.Platform.Filter.Test
     public class ODataFilterParserTest
     {
 
-        private readonly IFilterService<ODataFilterParserConfiguration> _filterParserService;
+        private readonly IFilterService<ODataFilterConfiguration> _filterParserService;
 
         public ODataFilterParserTest()
         {
             // initialize dependency injection environment...
             var serviceProvider = new ServiceCollection()
-                .AddFilter(FilterParserType.OData)
+                .AddSidubFilter(FilterParserType.OData)
                 .BuildServiceProvider();
 
-            _filterParserService = serviceProvider.GetService<ODataFilterService>() ?? throw new Exception("Filter parser service not initialized.");
+            _filterParserService = serviceProvider.GetService<IFilterService<ODataFilterConfiguration>>() ?? throw new Exception("Filter parser service not initialized.");
         }
 
         [TestMethod]

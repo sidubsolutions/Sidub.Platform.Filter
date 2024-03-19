@@ -1,4 +1,8 @@
-﻿using Sidub.Platform.Filter.Services;
+﻿#region Imports
+
+using Sidub.Platform.Filter.Services;
+
+#endregion
 
 namespace Sidub.Platform.Filter.Parsers.OData
 {
@@ -6,7 +10,7 @@ namespace Sidub.Platform.Filter.Parsers.OData
     /// <summary>
     /// Represents the configuration for the OData filter parser.
     /// </summary>
-    public class ODataFilterParserConfiguration : IFilterServiceConfiguration
+    public class ODataFilterConfiguration : IFilterServiceConfiguration
     {
 
         #region Public properties
@@ -26,9 +30,9 @@ namespace Sidub.Platform.Filter.Parsers.OData
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ODataFilterParserConfiguration"/> class.
+        /// Initializes a new instance of the <see cref="ODataFilterConfiguration"/> class.
         /// </summary>
-        public ODataFilterParserConfiguration()
+        public ODataFilterConfiguration()
         {
             FilterParsers = new List<IFilterParser>()
                 {

@@ -1,4 +1,8 @@
-﻿using Sidub.Platform.Filter.Services;
+﻿#region Imports
+
+using Sidub.Platform.Filter.Services;
+
+#endregion
 
 namespace Sidub.Platform.Filter.Parsers.MySql
 {
@@ -6,7 +10,7 @@ namespace Sidub.Platform.Filter.Parsers.MySql
     /// <summary>
     /// Represents the configuration for the MySql filter parser.
     /// </summary>
-    public class MySqlFilterParserConfiguration : IFilterServiceConfiguration
+    public class MySqlFilterConfiguration : IFilterServiceConfiguration
     {
 
         #region Public properties
@@ -26,9 +30,9 @@ namespace Sidub.Platform.Filter.Parsers.MySql
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MySqlFilterParserConfiguration"/> class.
+        /// Initializes a new instance of the <see cref="MySqlFilterConfiguration"/> class.
         /// </summary>
-        public MySqlFilterParserConfiguration()
+        public MySqlFilterConfiguration()
         {
             FilterParsers = new List<IFilterParser>()
                 {

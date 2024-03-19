@@ -17,16 +17,16 @@ namespace Sidub.Platform.Filter.Test
     public class GremlinFilterParserTest
     {
 
-        private readonly IFilterService<GremlinFilterParserConfiguration> _filterParserService;
+        private readonly IFilterService<GremlinFilterConfiguration> _filterParserService;
 
         public GremlinFilterParserTest()
         {
             // initialize dependency injection environment...
             var serviceProvider = new ServiceCollection()
-                .AddFilter(FilterParserType.Gremlin)
+                .AddSidubFilter(FilterParserType.Gremlin)
                 .BuildServiceProvider();
 
-            _filterParserService = serviceProvider.GetService<GremlinFilterService>()
+            _filterParserService = serviceProvider.GetService<IFilterService<GremlinFilterConfiguration>>()
                 ?? throw new Exception("Filter parser service not initialized."); ;
         }
 
